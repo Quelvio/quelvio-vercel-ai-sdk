@@ -1,0 +1,70 @@
+{
+  "name": "@quelvio/vercel-ai-sdk",
+  "version": "0.1.0",
+  "description": "Quelvio for the Vercel AI SDK — your company's brain as a tool() for streamText / generateText.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "README.md", "LICENSE", "CHANGELOG.md"],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Quelvio/quelvio-vercel-ai-sdk.git"
+  },
+  "homepage": "https://quelvio.com/docs/vercel-ai-sdk",
+  "bugs": {
+    "url": "https://github.com/Quelvio/quelvio-vercel-ai-sdk/issues"
+  },
+  "keywords": [
+    "quelvio",
+    "vercel",
+    "vercel-ai-sdk",
+    "ai-sdk",
+    "rag",
+    "retrieval",
+    "knowledge",
+    "enterprise-search",
+    "ai-agent",
+    "tool-calling"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "pack:dry": "pnpm pack --dry-run"
+  },
+  "peerDependencies": {
+    "ai": ">=4.0.0",
+    "zod": ">=3.22.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^20.17.0",
+    "ai": "^4.3.16",
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5",
+    "zod": "^3.23.8"
+  }
+}
